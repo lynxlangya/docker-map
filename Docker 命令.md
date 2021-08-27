@@ -199,7 +199,10 @@ Usage: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
 **新建容器并启动**
 
 ```bash
-docker run [可选参数] image
+docker run [可选参数] [镜像ID]
+
+# 示例
+docker run -d --name [nginx] -p 80:80 [镜像id]
 
 # 参数说明
 --name="NAME"		# 容器名称
@@ -407,6 +410,48 @@ docker attach [容器id]
 # cp
 docker cp [容器id]:[文件路径] [主机路径]
 ```
+
+## 卷命令
+
+**创建数据卷**
+
+```bash
+docker create [卷名称]
+```
+
+
+
+**查看数据卷**
+
+```bash
+docker inspect [卷名称]
+```
+
+
+
+**查看所有数据卷**
+
+```bash
+docker ls
+```
+
+
+
+**删除数据卷**
+
+```bash
+docker rm [卷名称]
+```
+
+
+
+**清理无用卷**
+
+```bash
+docker volume prune
+```
+
+
 
 
 
