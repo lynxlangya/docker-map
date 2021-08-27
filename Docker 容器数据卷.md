@@ -93,3 +93,26 @@ docker run -d -p 3306:3306 -v /home/mysql/conf:/etc/mysql/conf.d -v /home/mysql/
 
 ## 具名挂载 & 匿名挂载
 
+```bash
+# 匿名挂载
+-v 容器内路径
+
+# 具名挂载
+-v 卷名:容器内路径
+
+# 指定路径挂载
+-v /宿主机路径:/容器内路径
+```
+
+
+
+## 拓展
+
+```bash
+# ro：readonly      - 只读
+docker run -d -v /home/test:home:ro [镜像ID]
+
+# rw: readwrite     - 可读可写
+docker run -d -v /home/test:home:rw [镜像ID]
+```
+
