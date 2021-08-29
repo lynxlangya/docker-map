@@ -253,6 +253,8 @@ ADD --chown=10:11 files* /mydir/
 
 ## ENV 设置环境变量
 
+> 构建的时候设置环境变量
+
 **格式**
 
 - `ENV <key> <value>`
@@ -361,3 +363,4 @@ LABEL <key>=<value> <key>=<value> <key>=<value> ...
 **格式**
 
 `SHELL ['executable', 'parameters']`
+
